@@ -1,5 +1,6 @@
 package hello.core.member;
 
+import hello.core.AppConfig;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -9,7 +10,9 @@ public class MemberTests {
     void join() {
         // Arrange
         Member member = new Member(1L, "joonhee", Grade.VIP);
-        MemberService memberService = new MemberServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
 
         // Action
         memberService.join(member);
