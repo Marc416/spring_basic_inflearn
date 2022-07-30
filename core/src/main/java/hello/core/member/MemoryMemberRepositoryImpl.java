@@ -3,9 +3,9 @@ package hello.core.member;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MemberRepositoryImpl implements MemberRepository {
+public class MemoryMemberRepositoryImpl implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private static final Map<Long, Member> store = new HashMap<>();
 
     @Override
     public Member findById(Long memberId) {
