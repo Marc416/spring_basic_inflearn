@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 // Framework 가 실행시킴[제어]
 @Configuration
 public class AppConfig {
+    // Factory Method 로 생성하는 방식 : 외부로 부터 메서드를 통해 생성하는 방식.
     // Bean은 Spring Container에 등록됨
     @Bean
     public MemberService memberService() {
